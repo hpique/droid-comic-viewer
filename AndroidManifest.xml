@@ -21,7 +21,7 @@
     android:installLocation="auto">
 
     <uses-sdk
-        android:minSdkVersion="4"
+        android:minSdkVersion="9"
         android:targetSdkVersion="13" />
 
     <supports-screens
