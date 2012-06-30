@@ -180,7 +180,7 @@ public class BrowseActivity extends ExtendedActivity {
         View ad = AdsManager.getAd(this);
         RelativeLayout root = (RelativeLayout) findViewById(R.id.pickScreenRoot);
         if(ad != null) {
-        	RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+        	RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         	lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
         	root.addView(ad, lp);
         }

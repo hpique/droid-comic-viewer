@@ -56,7 +56,7 @@ public abstract class ExtendedPreferenceActivity extends PreferenceActivity impl
 		this.removeAd();
 		View ad = AdsManager.getAd(this);
 		if (ad != null) {
-			LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+			LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 			lp.gravity = Gravity.CENTER_HORIZONTAL;
 			adsContainer.addView(ad, lp);
 		}		

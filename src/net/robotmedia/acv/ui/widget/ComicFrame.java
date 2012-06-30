@@ -50,11 +50,11 @@ public class ComicFrame extends FrameLayout {
 		this.addView(mImage);
 
 		mContentContainer = new AbsoluteLayout(context);
-		mContentContainer.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		mContentContainer.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		this.addView(mContentContainer);
 
 		mLetterbox = new Letterbox(context);
-		mLetterbox.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		mLetterbox.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		this.addView(mLetterbox);
 
 	}	

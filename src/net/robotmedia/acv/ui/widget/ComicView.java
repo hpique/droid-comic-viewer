@@ -530,7 +530,7 @@ public class ComicView extends RelativeLayout implements OnCompletionListener, O
 
 			public View makeView() {
 				final ComicFrame view = new ComicFrame(getContext());
-				view.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+				view.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 				// SuperImageView i = new SuperImageView(getContext(), null, attributeScrollViewStyle);
 				// i.setScaleType(ImageView.ScaleType.CENTER);
 				// FIXME: Why does the following show the image vertically

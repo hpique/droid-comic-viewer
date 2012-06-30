@@ -69,7 +69,7 @@ public class CaptionView extends RelativeLayout {
 
 		mCaptionWebView = new WebView(getContext());
 		{
-			final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+			final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 			mCaptionWebView.setLayoutParams(params);
 		}
 		mCaptionWebView.getSettings().setJavaScriptEnabled(true);

@@ -1198,7 +1198,7 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		hideAds();
 		View ad = AdsManager.getAd(this);
 		if(ad != null) {
-			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 			lp.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
 			mAdsContainer.addView(ad, lp);
 		}

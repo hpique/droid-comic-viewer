@@ -50,10 +50,10 @@ public class Letterbox extends RelativeLayout {
 	}
 	
 	private void init(Context context) {
-		mLetterboxTop = addLetterbox(context, LayoutParams.FILL_PARENT, 1, RelativeLayout.ALIGN_PARENT_TOP);
-		mLetterboxBottom = addLetterbox(context, LayoutParams.FILL_PARENT, 1, RelativeLayout.ALIGN_PARENT_BOTTOM);
-		mLetterboxLeft = addLetterbox(context, 1, LayoutParams.FILL_PARENT, RelativeLayout.ALIGN_PARENT_LEFT);	
-		mLetterboxRight = addLetterbox(context, 1, LayoutParams.FILL_PARENT, RelativeLayout.ALIGN_PARENT_RIGHT);		
+		mLetterboxTop = addLetterbox(context, LayoutParams.MATCH_PARENT, 1, RelativeLayout.ALIGN_PARENT_TOP);
+		mLetterboxBottom = addLetterbox(context, LayoutParams.MATCH_PARENT, 1, RelativeLayout.ALIGN_PARENT_BOTTOM);
+		mLetterboxLeft = addLetterbox(context, 1, LayoutParams.MATCH_PARENT, RelativeLayout.ALIGN_PARENT_LEFT);	
+		mLetterboxRight = addLetterbox(context, 1, LayoutParams.MATCH_PARENT, RelativeLayout.ALIGN_PARENT_RIGHT);		
 	}
 	
 	public Letterbox(Context context) {
@@ -67,28 +67,28 @@ public class Letterbox extends RelativeLayout {
 	}
 
 	private void layoutTop() {
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, mLetterboxHeight);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mLetterboxHeight);
 		params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
 		mLetterboxTop.setLayoutParams(params);
 		mLetterboxTop.setBackgroundColor(mLetterboxHeight > 1 ? mColor : Color.TRANSPARENT);
 	}
 
 	private void layoutBottom() {
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, mLetterboxHeight);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mLetterboxHeight);
 		params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		mLetterboxBottom.setLayoutParams(params);
 		mLetterboxBottom.setBackgroundColor(mLetterboxHeight > 1 ? mColor : Color.TRANSPARENT);
 	}
 	
 	private void layoutLeft() {
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(mLetterboxWidth, ViewGroup.LayoutParams.FILL_PARENT);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(mLetterboxWidth, ViewGroup.LayoutParams.MATCH_PARENT);
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 		mLetterboxLeft.setLayoutParams(params);
 		mLetterboxLeft.setBackgroundColor(mLetterboxWidth > 1 ? mColor : Color.TRANSPARENT);
 	}
 	
 	private void layoutRight() {
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(mLetterboxWidth, ViewGroup.LayoutParams.FILL_PARENT);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(mLetterboxWidth, ViewGroup.LayoutParams.MATCH_PARENT);
 		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 		mLetterboxRight.setLayoutParams(params);
 		mLetterboxRight.setBackgroundColor(mLetterboxWidth > 1 ? mColor : Color.TRANSPARENT);
