@@ -18,10 +18,8 @@
     <string name="activity_browse_label">Pantallas</string>
     <string name="activity_sd_browser_label">Selecciona un comic de la tarjeta SD</string>
     <string name="activity_settings_label">Ajustes</string>
-    <string name="activity_credits_label">Créditos</string>
     <string name="activity_subscribe_label">Subscríbete</string>
     
-    <string name="main_intro">Presiona <b>Menu</b> para comenzar</string>
     <string name="item_navigate_title">Ir a</string>
     <string name="item_navigate_shortcut">I</string>
     <string name="item_first_title">Primera</string>
@@ -69,7 +67,6 @@
  
     <string name="sd_browser_back">Atrás</string>
     <string name="sd_browser_empty">Carpeta vacía</string>
-    <string name="sd_browser_download">Descargar comics</string>
     
     <string name="screen_browser_go">Go</string>
     
@@ -112,17 +109,11 @@
     <string name="preference_invisible_corners_summary">Hacer invisibles los botones de las esquinas</string>
     <string name="preference_brigthness_title">Brillo</string>
     <string name="preference_brigthness_summary">Ajustar el brillo de pantalla</string>
-    <string name="preference_frames_title">Usar viñetas</string>
-    <string name="preference_frames_summary">Navegar por viñetas si se hay metadatos disponibles</string>   
     <string name="category_memory_title">Memoria</string>
-    <string name="preference_load_last_title">Cargar último comic</string>
-    <string name="preference_load_last_summary">Carga el último comic al inicio</string>
     <string name="preference_clear_history_title">Borrar historial</string>
     <string name="preference_clear_history_summary">Borrar todo el historial de visualización</string>
     <string name="preference_low_memory_title">Bajo consumo de memoria</string>
     <string name="preference_low_memory_summary">Deshabilitar precarga y transiciones</string>  
-    <string name="preference_manual_title">Manual de usuario</string>
-    <string name="preference_manual_summary">Abrir el manual de usuario en el navegador</string>  
     <string name="preference_acv_listing_title">Ficha en Google Play</string>
     <string name="preference_acv_listing_summary">Abrir la ficha de ACV en Google Play</string>  
     <string name="category_about_title">Acerca de</string>
@@ -130,8 +121,6 @@
     <string name="preference_version_summary">ACV v</string>  
     <string name="preference_contact_title">Contacto</string>
     <string name="preference_contact_summary">Enviar un email a Robot Media</string>                       
-    <string name="preference_site_title">Sitio web</string>
-    <string name="preference_site_summary">Abrir el sitio web de Robot Media en el navegador</string>      
     <string name="preference_subscribe_summary">Recibe noticias sobre ACV y futuros lanzamientos</string>  
     
     <!-- Premium -->

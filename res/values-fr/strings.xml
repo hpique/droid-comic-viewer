@@ -18,9 +18,7 @@
 <string name='activity_browse_label'>Parcourir les pages</string>
 <string name='activity_sd_browser_label'>Sélectionner une BD sur votre carte SD</string>
 <string name='activity_settings_label'>Paramètres</string>
-<string name='activity_credits_label'>Contributeurs</string>
 <string name='activity_subscribe_label'>Souscrire</string>
-<string name='main_intro'>Appuyez sur <b>Menu</b> pour démarrer</string>
 <string name='item_navigate_title'>Aller à</string>
 <string name='item_navigate_shortcut'>A</string>
 <string name='item_first_title'>Début</string>
@@ -66,7 +64,6 @@
 <string name='dialog_unavailable_text'>L\'application demandée est soit indisponible soit inaccessible.\n\nVoulez-vous vous inscrire à la lettre d\'informations et être informer des futures versions?</string>
 <string name='sd_browser_back'>Retour au répertoire parent</string>
 <string name='sd_browser_empty'>Répertoire vide</string>
-<string name='sd_browser_download'>Télécharger des BD</string>
 <string name='screen_browser_go'>Go</string>
 <string name='category_controls_title'>Contrôles</string>
 <string name='preference_map_actions_title'>Contrôles personnalisés</string>
@@ -108,10 +105,6 @@
 <string name='preference_brigthness_title'>Luminosité</string>
 <string name='preference_brigthness_summary'>Ajuster la luminosité de l\'écran</string>
 <string name='category_memory_title'>Mémoire</string>
-<string name='preference_load_last_title'>Charger la dernière BD</string>
-<string name='preference_load_last_summary'>Charger la dernière BD consultée au démarrage</string>
-<string name='preference_manual_title'>Manuel d\'utilisation</string>
-<string name='preference_manual_summary'>Ouvrir le manuel d\'utilisation dans le Navigateur par défaut</string>
 <string name='category_about_title'>A propos</string>
 <string name='preference_acv_listing_title'>Fiche sur le market Android</string>
 <string name='preference_acv_listing_summary'>Ouvrir la fiche d\'ACV sur le market</string>
@@ -119,16 +112,7 @@
 <string name='preference_version_summary'>ACV v</string>
 <string name='preference_contact_title'>Contacter</string>
 <string name='preference_contact_summary'>Envoyer un message à Robot Media</string>
-<string name='preference_site_title'>Site web</string>
-<string name='preference_site_summary'>Ouvrir le site de Robot Media dans le navigateur par défaut</string>
 <string name='preference_subscribe_summary'>Recevoir les nouveautés sur ACV et les sorties de BD mobiles.</string>
-<string name='category_acv_format_title'>Format ACV</string>
-<string name='preference_acv_frames_title'>Cases</string>
-<string name='preference_acv_frames_summary'>Navigation case par case</string>
-<string name='preference_acv_vibration_title'>Vibration</string>
-<string name='preference_acv_vibration_summary'>Vibration et effets d\'écran secoué</string>
-<string name='preference_acv_autoplay_title'>Lecture automatique</string>
-<string name='preference_acv_autoplay_summary'>Activer les séquences de lecture automatique</string>
 <string name='txt_subscribe_intro'>Souscrire à notre lettre d\'informations pour être notifier des futures sorties</string>
 <string name='btn_subscribe_submit'>Soumettre</string>
 <string name='dialog_subscribe_success_title'>Inscription en cours</string>

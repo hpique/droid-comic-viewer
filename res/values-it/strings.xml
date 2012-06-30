@@ -66,7 +66,6 @@
 <string name='dialog_unavailable_text'>La app richiesta non è disponibile o raggiungibile.\n\nDesideri iscriverti alla nostra newsletter per essere informato riguardo future versioni?</string>
 <string name='sd_browser_back'>Torna alla cartella superiore</string>
 <string name='sd_browser_empty'>Cartella vuota</string>
-<string name='sd_browser_download'>Scarica fumetti</string>
 <string name='screen_browser_go'>Vai</string>
 <string name='category_controls_title'>Controlli</string>
 <string name='preference_map_actions_title'>Controlli personalizzati</string>
@@ -108,10 +107,6 @@
 <string name='preference_brigthness_title'>Luminosità</string>
 <string name='preference_brigthness_summary'>Regola la luminosità dello schermo</string>
 <string name='category_memory_title'>Memoria</string>
-<string name='preference_load_last_title'>Carica l\'ultimo fumetto</string>
-<string name='preference_load_last_summary'>All\'avvio carica l\'ultimo fumetto letto</string>
-<string name='preference_manual_title'>Manuale utente</string>
-<string name='preference_manual_summary'>Apre il manuale utente nel browser</string>
 <string name='category_about_title'>Informazioni</string>
 <string name='preference_acv_listing_title'>Pagina Google Play</string>
 <string name='preference_acv_listing_summary'>Apri la pagina di ACV su Google Play</string>
@@ -119,16 +114,7 @@
 <string name='preference_version_summary'>ACV v</string>
 <string name='preference_contact_title'>Contatti</string>
 <string name='preference_contact_summary'>Invia una email a Robot Media</string>
-<string name='preference_site_title'>Sito web</string>
-<string name='preference_site_summary'>Apre il sito di Robot Media nel browser</string>
 <string name='preference_subscribe_summary'>Ricevi notizie riguardo ACV e future pubblicazioni</string>
-<string name='category_acv_format_title'>Formato ACV</string>
-<string name='preference_acv_frames_title'>Fotogrammi</string>
-<string name='preference_acv_frames_summary'>Navigazione fotogramma per fotogramma</string>
-<string name='preference_acv_vibration_title'>Vibrazione</string>
-<string name='preference_acv_vibration_summary'>Vibrazione ed effetti di inclinazione schermo</string>
-<string name='preference_acv_autoplay_title'>Autoplay</string>
-<string name='preference_acv_autoplay_summary'>Abilita riproduzione automatica di sequenze</string>
 <string name='txt_subscribe_intro'>Iscriviti alla nostra newsletter per essere informato riguardo future pubblicazioni.</string>
 <string name='btn_subscribe_submit'>Invia</string>
 <string name='dialog_subscribe_success_title'>Iscrizione in corso</string>

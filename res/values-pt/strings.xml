@@ -67,7 +67,6 @@
 <string name='dialog_unavailable_text'>O aplicativo requisitado ainda não está disponível, ou não é possível checar agora.\n\nVocê gostaria de assinar nosso boletim e ser notificado sobre os próximos lançamentos?</string>
 <string name='sd_browser_back'>Voltar</string>
 <string name='sd_browser_empty'>Pasta vazia</string>
-<string name='sd_browser_download'>Download comics</string>
 <string name='screen_browser_go'>Go</string>
 <string name='category_controls_title'>Controles</string>
 <string name='preference_map_actions_title'>Definir controles</string>
@@ -110,10 +109,6 @@
 <string name='preference_brigthness_summary'>Ajusta o brilho da tela</string>
 <string name='preference_default_brightness'>Brilho padrão</string>
 <string name='category_memory_title'>Memória</string>
-<string name='preference_load_last_title'>Carregar último comic</string>
-<string name='preference_load_last_summary'>Carregar último comic na inicialização</string>
-<string name='preference_manual_title'>Manual do usuário</string>
-<string name='preference_manual_summary'>Abre o manual do usuário no navegador</string>
 <string name='category_about_title'>Sobre</string>
 <string name='preference_acv_listing_title'>Detalhes no Google Play</string>
 <string name='preference_acv_listing_summary'>Abre os detalhes do ACV no Google Play</string>
@@ -121,16 +116,7 @@
 <string name='preference_version_summary'>ACV v</string>
 <string name='preference_contact_title'>Contato</string>
 <string name='preference_contact_summary'>Enviar email para Robot Media</string>
-<string name='preference_site_title'>Site da web</string>
-<string name='preference_site_summary'>Abre o site do Robot Media no navegador</string>
 <string name='preference_subscribe_summary'>Receber notícias sobre o ACV e lançamentos de comics</string>
-<string name='category_acv_format_title'>Formato ACV</string>
-<string name='preference_acv_frames_title'>Quadros</string>
-<string name='preference_acv_frames_summary'>Navegação quadro a quadro</string>
-<string name='preference_acv_vibration_title'>Vibrar</string>
-<string name='preference_acv_vibration_summary'>Efeitos de vibração</string>
-<string name='preference_acv_autoplay_title'>Autoplay</string>
-<string name='preference_acv_autoplay_summary'>Habilitar sequências automáticas</string>
 <string name='txt_subscribe_intro'>Assinar nosso boletim de email sobre futuros lançamentos</string>
 <string name='btn_subscribe_submit'>Enviar</string>
 <string name='dialog_subscribe_success_title'>Assinatura em andamento</string>
