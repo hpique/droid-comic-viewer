@@ -26,6 +26,7 @@
     	android:layout_height="32px"
     	android:layout_alignParentLeft="true"
     	style="@style/Theme.image2"
+    	android:contentDescription="@string/accesibility_icon"
     android:layout_gravity="center"/>
 
 	<RelativeLayout android:id="@+id/sd_item_detail"

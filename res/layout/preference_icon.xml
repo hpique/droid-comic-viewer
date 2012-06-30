@@ -28,7 +28,8 @@
         android:id="@+id/icon"
         android:layout_marginLeft="6dip"
         android:layout_marginRight="6dip"
-        android:layout_gravity="center" android:layout_height="32dip" android:layout_width="32dip" android:scaleType="fitCenter"/> 
+        android:layout_gravity="center" android:layout_height="32dip" android:layout_width="32dip" android:scaleType="fitCenter"
+        android:contentDescription="@string/accesibility_icon"/> 
  
     <RelativeLayout 
         android:layout_width="wrap_content"
