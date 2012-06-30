@@ -16,6 +16,7 @@
 package net.robotmedia.acv.ui.widget;
 
 import net.robotmedia.acv.utils.MathUtils;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
@@ -30,6 +31,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+@SuppressLint("SetJavaScriptEnabled")
 public class CaptionView extends RelativeLayout {
 
 	private WebView mCaptionWebView;
