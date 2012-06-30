@@ -18,9 +18,7 @@
 <string name='activity_browse_label'>Esplora schermate</string>
 <string name='activity_sd_browser_label'>Seleziona fumetto dalla scheda SD</string>
 <string name='activity_settings_label'>Impostazioni</string>
-<string name='activity_credits_label'>Riconoscimenti</string>
 <string name='activity_subscribe_label'>Iscriviti</string>
-<string name='main_intro'>Premi <b>Menù</b> per iniziare</string>
 <string name='item_navigate_title'>Vai a</string>
 <string name='item_navigate_shortcut'>V</string>
 <string name='item_first_title'>Prima</string>

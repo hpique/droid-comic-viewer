@@ -18,9 +18,7 @@
 <string name='activity_browse_label'>Przeglądaj</string>
 <string name='activity_sd_browser_label'>Wybierz komiks z karty SD</string>
 <string name='activity_settings_label'>Ustawienia</string>
-<string name='activity_credits_label'>O autorach</string>
 <string name='activity_subscribe_label'>Subskrypcja</string>
-<string name='main_intro'>Naciśnij <b>Menu</b> by rozpocząć</string>
 <string name='item_navigate_title'>Idź do</string>
 <string name='item_navigate_shortcut'>N</string>
 <string name='item_first_title'>Pierwszy</string>

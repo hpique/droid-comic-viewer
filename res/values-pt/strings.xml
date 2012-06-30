@@ -18,9 +18,7 @@
 <string name='activity_browse_label'>Páginas</string>
 <string name='activity_sd_browser_label'>Selecione um Comics do seu SD</string>
 <string name='activity_settings_label'>Configurações</string>
-<string name='activity_credits_label'>Créditos</string>
 <string name='activity_subscribe_label'>Assinar</string>
-<string name='main_intro'>Aperte <b>Menu</b> para começar</string>
 <string name='item_navigate_title'>Ir para</string>
 <string name='item_navigate_shortcut'>I</string>
 <string name='item_first_title'>Primeira</string>
