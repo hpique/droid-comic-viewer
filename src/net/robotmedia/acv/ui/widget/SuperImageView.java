@@ -222,11 +222,11 @@ public class SuperImageView extends ImageView {
 		}
 	}
 	
-	private float getMaxWidth() {
+	private float getMaxZoomWidth() {
 		return getOriginalWidth() * Constants.MAX_ZOOM_FACTOR;	
 	}
 	
-	private float getMaxHeight() {
+	private float getMaxZoomHeight() {
 		return getOriginalHeight() * Constants.MAX_ZOOM_FACTOR;		
 	}
 	
@@ -236,7 +236,7 @@ public class SuperImageView extends ImageView {
 
 
 	private boolean isBiggerThanAllowed(int width, int height) {
-		return width > getMaxWidth() || height > getMaxHeight();
+		return width > getMaxZoomWidth() || height > getMaxZoomHeight();
 	}
 
 	private boolean isSmallerThanAllowed(int width, int height) {
@@ -571,8 +571,8 @@ public class SuperImageView extends ImageView {
 		int newWidth = Math.round(getOriginalWidth() * factor);
 		int newHeight = Math.round(getOriginalHeight() * factor);
 		if (isBiggerThanAllowed(newWidth, newHeight)) {
-			newWidth = Math.round(getMaxWidth());
-			newHeight = Math.round(getMaxHeight());
+			newWidth = Math.round(getMaxZoomWidth());
+			newHeight = Math.round(getMaxZoomHeight());
 			factor = (float) newWidth / (float) getWidth();
 			setScaleType(ScaleType.FIT_CENTER);
 			setLayoutParams(createLayoutParams(newWidth, newHeight));
@@ -613,8 +613,8 @@ public class SuperImageView extends ImageView {
 		int newWidth = Math.round(getWidth() * factor);
 		int newHeight = Math.round(getHeight() * factor);
 		if (isBiggerThanAllowed(newWidth, newHeight)) {
-			newWidth = Math.round(getMaxWidth());
-			newHeight = Math.round(getMaxHeight());
+			newWidth = Math.round(getMaxZoomWidth());
+			newHeight = Math.round(getMaxZoomHeight());
 			factor = (float) newWidth / (float) getWidth();
 			setScaleType(ScaleType.FIT_CENTER);
 			setLayoutParams(createLayoutParams(newWidth, newHeight));
