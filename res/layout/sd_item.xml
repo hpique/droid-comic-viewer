@@ -22,9 +22,8 @@
     >
     
     <ImageView android:id="@+id/sd_item_icon"
-    	android:layout_width="32px"
-    	android:layout_height="32px"
-    	android:layout_alignParentLeft="true"
+    	android:layout_width="32dp"
+    	android:layout_height="32dp"
     	style="@style/Theme.image2"
     	android:contentDescription="@string/accesibility_icon"
     android:layout_gravity="center"/>
@@ -32,8 +31,7 @@
 	<RelativeLayout android:id="@+id/sd_item_detail"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@id/sd_item_icon"
-        android:paddingLeft="8px"
+        android:paddingLeft="8dp"
 		android:orientation="vertical"
 		android:layout_gravity="center_vertical">
 		
