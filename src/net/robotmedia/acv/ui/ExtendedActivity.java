@@ -184,6 +184,7 @@ public class ExtendedActivity extends Activity {
 		}
 	}
 	
+	@TargetApi(11)
 	protected class MenuHelper {
 		public void invalidateOptionsMenu() {
 			ExtendedActivity.this.invalidateOptionsMenu();
