@@ -52,9 +52,9 @@
 <string name='menu_close_shortcut'>X</string>
 <string name='dialog_no_sd_title'>Attenzione</string>
 <string name='dialog_no_sd_text'>Non è stata rilevata alcuna scheda SD.\n\nSi prega di inserire o montare la scheda SD per aprire i fumetti.</string>
-<string name='dialog_page_progress_title'>Caricamento...</string>
-<string name='dialog_page_progress_text'>Caricando schermata @number. Si prega di attendere...</string>
-<string name='dialog_loading_progress_title'>Caricamento...</string>
+<string name='dialog_page_progress_title'>Caricamento&#8230;</string>
+<string name='dialog_page_progress_text'>Caricando schermata @number. Si prega di attendere&#8230;</string>
+<string name='dialog_loading_progress_title'>Caricamento&#8230;</string>
 <string name='dialog_loading_progress_text'>Caricamento archivio da scheda SD.</string>
 <string name='dialog_load_error_title'>Oops!</string>
 <string name='dialog_load_error_text'>Si è verificato un errore caricando il fumetto. In caso sia necessario aiuto, contatta support@androidcomics.net.</string>

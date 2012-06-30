@@ -52,9 +52,9 @@
 <string name='menu_close_shortcut'>X</string>
 <string name='dialog_no_sd_title'>Uwaga</string>
 <string name='dialog_no_sd_text'>Brak karty SD.\n\nWłóż lub udostępnij kartę SD by otworzyć komiksy.</string>
-<string name='dialog_page_progress_title'>Wczytuję...</string>
-<string name='dialog_page_progress_text'>Wczytuję ekran #@number. Cierpliwości...</string>
-<string name='dialog_loading_progress_title'>Wczytuję...</string>
+<string name='dialog_page_progress_title'>Wczytuję&#8230;</string>
+<string name='dialog_page_progress_text'>Wczytuję ekran #@number. Cierpliwości&#8230;</string>
+<string name='dialog_loading_progress_title'>Wczytuję&#8230;</string>
 <string name='dialog_loading_progress_text'>Wczytuję plik komiksu z karty SD.</string>
 <string name='dialog_load_error_title'>Ups!</string>
 <string name='dialog_load_error_text'>Wystąpił błąd podczas wczytywania. Jeśli potrzebujesz pomocy, napisz do support@androidcomics.net.</string>

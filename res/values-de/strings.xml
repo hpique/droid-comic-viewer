@@ -47,9 +47,9 @@
     
     <string name="dialog_no_sd_title">Achtung</string>
     <string name="dialog_no_sd_text">Keine Karte gefunden.\n\nBitte setzen Sie die SD Karte ein um Comics zu öffnen.</string>
-    <string name="dialog_page_progress_title">Laden...</string>
-    <string name="dialog_page_progress_text">Lade Bildschirm @number. Bitte warten...</string>
-    <string name="dialog_loading_progress_title">Laden...</string>
+    <string name="dialog_page_progress_title">Laden&#8230;</string>
+    <string name="dialog_page_progress_text">Lade Bildschirm @number. Bitte warten&#8230;</string>
+    <string name="dialog_loading_progress_title">Laden&#8230;</string>
     <string name="dialog_loading_progress_text">Lade Comic-Archiv von der SD Karte.</string>
     <string name="dialog_load_error_title">Oh!</string>
     <string name="dialog_load_error_text">An error has occurred while loading the comic. If you need help, please contact support@androidcomics.net.</string>

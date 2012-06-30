@@ -52,9 +52,9 @@
 <string name='menu_close_shortcut'>F</string>
 <string name='dialog_no_sd_title'>Attention</string>
 <string name='dialog_no_sd_text'>Pas de carte SD trouvée.\n\nVeuillez insérer ou monter une carte SD afin d\'ouvrir une BD.</string>
-<string name='dialog_page_progress_title'>Chargement...</string>
-<string name='dialog_page_progress_text'>Chargement de la page @number. Veuillez patienter...</string>
-<string name='dialog_loading_progress_title'>Chargement...</string>
+<string name='dialog_page_progress_title'>Chargement&#8230;</string>
+<string name='dialog_page_progress_text'>Chargement de la page @number. Veuillez patienter&#8230;</string>
+<string name='dialog_loading_progress_title'>Chargement&#8230;</string>
 <string name='dialog_loading_progress_text'>Chargement de l\'archive de la BD à partir de la carte SD.</string>
 <string name='dialog_load_error_title'>Oups!</string>
 <string name='dialog_load_error_text'>Une erreur s\'est produite pendant le chargement. Si vous avez besoin d\'aide, veuillez contacter support@androidcomics.net.</string>
