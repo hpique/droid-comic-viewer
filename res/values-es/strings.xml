@@ -133,13 +133,6 @@
     <string name="preference_site_title">Sitio web</string>
     <string name="preference_site_summary">Abrir el sitio web de Robot Media en el navegador</string>      
     <string name="preference_subscribe_summary">Recibe noticias sobre ACV y futuros lanzamientos</string>  
-    <string name="category_acv_format_title">Ficheros ACV</string>
-    <string name="preference_acv_frames_title">Cuadros</string>
-    <string name="preference_acv_frames_summary">Navegación cuadro por cuadro</string>
-    <string name="preference_acv_vibration_title">Vibración</string>
-    <string name="preference_acv_vibration_summary">Efectos de vibración</string>
-    <string name="preference_acv_autoplay_title">Autoplay</string>
-    <string name="preference_acv_autoplay_summary">Secuencias de reproducción automática</string>
     
     <!-- Premium -->
     <string name="category_premium_title">Premium</string>
