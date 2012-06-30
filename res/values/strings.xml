@@ -32,20 +32,27 @@
     <string name="item_next_screen_title">Next screen</string>
     <string name="item_last_title">Last</string>
     <string name="item_zoom_title">Zoom</string>
+    <string name="item_zoom_shortcut">Z</string>
     <string name="item_zoom_in_title">Zoom in</string>
     <string name="item_zoom_out_title">Zoom out</string>
     <string name="item_fit_width_title">Fit width</string>
     <string name="item_fit_height_title">Fit height</string>
     <string name="item_actual_size">Actual size</string>
     <string name="item_rotate_title">Rotate</string>
+    <string name="item_rotate_shortcut">R</string>
     <string name="item_browse_title">Browse</string>
+    <string name="item_browse_shortcut">B</string>
     <string name="item_share_title">Share</string>
+    <string name="item_share_shortcut">H</string>
     <string name="item_share_screen_title">Share this screen</string>
     <string name="item_set_as_title">Set as</string>
     <string name="item_share_app_title">Recommend ACV</string>
     <string name="item_open_title">Open</string>
+    <string name="item_open_shortcut">O</string>
     <string name="item_settings_title">Settings</string>
+    <string name="item_settings_shortcut">E</string>
     <string name="menu_close_title">Close</string>
+    <string name="menu_close_shortcut">C</string>
     
     <string name="dialog_no_sd_title">Warning</string>
     <string name="dialog_no_sd_text">No SD card was found.\n\nPlease insert or mount your SD card to open comics.</string>
@@ -144,6 +151,7 @@
 
 	<!-- Subscribe -->
     <string name="txt_subscribe_intro">Subscribe to our email newsletter to be notified of future releases.</string>
+    <string name="edt_email">Email</string>
     <string name="btn_subscribe_submit">Submit</string>
    	<string name="dialog_subscribe_success_title">Subscription in process</string>
     <string name="dialog_subscribe_success_text">You will receive an activation email shortly.</string>
