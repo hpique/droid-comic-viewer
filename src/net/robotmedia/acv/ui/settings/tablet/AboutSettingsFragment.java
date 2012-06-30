@@ -19,6 +19,7 @@ import net.androidcomics.acv.R;
 import net.robotmedia.acv.Constants;
 import net.robotmedia.acv.ui.SubscribeActivity;
 import net.robotmedia.acv.ui.widget.DialogFactory;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -26,6 +27,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 
+@TargetApi(11)
 public class AboutSettingsFragment extends ExtendedPreferenceFragment {
 
 	private static final String KEY_SUBSCRIBE = "subscribe";

@@ -19,11 +19,13 @@ import net.androidcomics.acv.R;
 import net.robotmedia.acv.billing.BillingManager;
 import net.robotmedia.acv.billing.BillingManager.IObserver;
 import net.robotmedia.acv.ui.settings.PremiumSettingsHelper;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 
+@TargetApi(11)
 public class PremiumSettingsFragment extends ExtendedPreferenceFragment implements IObserver {
 
 	private PremiumSettingsHelper helper;

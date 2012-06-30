@@ -18,6 +18,7 @@ package net.robotmedia.acv.ui.settings.tablet;
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.Constants;
 import net.robotmedia.acv.logic.PreferencesController;
+import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.preference.Preference.OnPreferenceClickListener;
 
+@TargetApi(11)
 public class ControlSettingsFragment extends ExtendedPreferenceFragment {
 	
 	@Override

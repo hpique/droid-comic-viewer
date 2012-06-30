@@ -17,8 +17,10 @@ package net.robotmedia.acv.ui.settings.tablet;
 
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.ui.settings.CollectionSettingsHelper;
+import android.annotation.TargetApi;
 import android.os.Bundle;
 
+@TargetApi(11)
 public class StorageSettingsFragment extends ExtendedPreferenceFragment {
 	
 	private CollectionSettingsHelper helper;

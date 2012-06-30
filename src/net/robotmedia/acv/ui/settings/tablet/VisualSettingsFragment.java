@@ -16,8 +16,10 @@
 package net.robotmedia.acv.ui.settings.tablet;
 
 import net.androidcomics.acv.R;
+import android.annotation.TargetApi;
 import android.os.Bundle;
 
+@TargetApi(11)
 public class VisualSettingsFragment extends ExtendedPreferenceFragment {
 
 	@Override

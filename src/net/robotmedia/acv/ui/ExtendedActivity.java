@@ -20,6 +20,7 @@ import java.util.HashSet;
 import net.robotmedia.acv.logic.AdsManager;
 import net.robotmedia.acv.logic.TrackingManager;
 import net.robotmedia.acv.utils.BuildUtils;
+import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -150,6 +151,7 @@ public class ExtendedActivity extends Activity {
 		return BuildUtils.isIceCreamSandwichOrLater();
 	}
 
+	@TargetApi(11)
 	protected class ActionBarHelper {
 
 		public void setup() {

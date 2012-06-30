@@ -18,6 +18,7 @@ package net.robotmedia.acv.ui.settings.tablet;
 import java.util.HashSet;
 
 import net.robotmedia.acv.logic.TrackingManager;
+import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
+@TargetApi(11)
 public class ExtendedPreferenceFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
 	
 	private HashSet<String> showValueOnSummaryKeys = new HashSet<String>();

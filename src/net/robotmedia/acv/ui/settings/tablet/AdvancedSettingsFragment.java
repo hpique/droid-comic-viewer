@@ -17,9 +17,11 @@ package net.robotmedia.acv.ui.settings.tablet;
 
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.logic.PreferencesController;
+import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+@TargetApi(11)
 public class AdvancedSettingsFragment extends ExtendedPreferenceFragment {
 	
 	@Override

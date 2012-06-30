@@ -17,11 +17,13 @@ package net.robotmedia.acv.ui.settings.tablet;
 
 import java.util.List;
 
+import android.annotation.TargetApi;
 import android.preference.PreferenceActivity;
 
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.billing.BillingManager;
 
+@TargetApi(11)
 public class SettingsActivityTablet extends PreferenceActivity {
 
 	private List<Header> headers;
