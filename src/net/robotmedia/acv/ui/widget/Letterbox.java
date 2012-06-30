@@ -44,7 +44,7 @@ public class Letterbox extends RelativeLayout {
 		final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width, height);
 		params.addRule(align);
 		letterbox.setLayoutParams(params);
-		letterbox.setBackgroundColor(android.R.color.transparent);
+		letterbox.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 		this.addView(letterbox);
 		return letterbox;
 	}
