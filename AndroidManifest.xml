@@ -120,7 +120,8 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         
         <service android:name="net.robotmedia.billing.BillingService" />
-        <receiver android:name="net.robotmedia.billing.BillingReceiver" >
+        <receiver android:name="net.robotmedia.billing.BillingReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
                 <action android:name="com.android.vending.billing.RESPONSE_CODE" />
