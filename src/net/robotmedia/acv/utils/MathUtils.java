@@ -27,7 +27,7 @@ public class MathUtils {
 	}
 	
 	public static double getAngle(float x1, float y1, float x2, float y2) {
-		return Math.toDegrees(Math.acos((x1 - x2) / Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2))));
+		return Math.toDegrees(Math.acos((x1 - x2) / FloatMath.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2))));
 	}
 	
 	public static boolean isEqual(int valueA, int valueB, int tolerance) {

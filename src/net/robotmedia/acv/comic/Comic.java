@@ -34,6 +34,7 @@ import android.graphics.Color;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
+import android.util.FloatMath;
 import android.util.Log;
 
 public abstract class Comic {
@@ -202,7 +203,7 @@ public abstract class Comic {
 		
 		float sampleSizeF = (float) width / (float) newWidth;
 	
-		int sampleSize = (int) Math.round(Math.ceil(sampleSizeF));
+		int sampleSize = (int) Math.round(FloatMath.ceil(sampleSizeF));
 		return sampleSize;
 	}
 	
