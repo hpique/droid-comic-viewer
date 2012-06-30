@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.logic.AdsManager;
 import net.robotmedia.billing.BillingController;
