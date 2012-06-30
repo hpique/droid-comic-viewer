@@ -42,7 +42,7 @@
         android:inputType="textEmailAddress"
         android:paddingBottom="15dp"
         android:paddingTop="15dp"
-        android:text="email"
+        android:text="@string/edt_email"
         android:width="250dp" >
     </EditText>
 
