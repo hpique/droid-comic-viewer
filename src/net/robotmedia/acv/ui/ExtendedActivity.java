@@ -26,7 +26,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.*;
 
-public class ExtendedActivity extends Activity {
+public abstract class ExtendedActivity extends Activity {
 
 	public void setCanBeKilledByChild(boolean value) {
 		this.canBeKilledByChild = value;
