@@ -75,7 +75,7 @@ public class BrightnessPreference extends DialogPreference implements
 		if (shouldPersist()) { 
 			persistInt(value);
 		}
-		callChangeListener(new Integer(value));
+		callChangeListener(Integer.valueOf(value));
 		/*
 		float brightness = value;
 		WindowManager.LayoutParams lp = getDialog().getWindow().getAttributes();
