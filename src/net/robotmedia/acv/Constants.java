@@ -166,7 +166,6 @@ public class Constants {
 	public static final String EVENT_PARAM_INPUT = "input";
 	public static final String EVENT_VALUE_LANDSCAPE = "landscape";
 	public static final String EVENT_VALUE_PORTRAIT = "portrait";
-	public static final String EVENT_VALUE_SQUARE = "square";
 	public static final String EVENT_VALUE_UNDEFINED = "undefined";
 	public static final String EVENT_VALUE_FOLDER = "folder";
 	public static final String EVENT_VALUE_MENU = "menu";

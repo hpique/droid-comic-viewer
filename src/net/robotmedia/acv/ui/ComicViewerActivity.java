@@ -842,8 +842,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 				return Constants.EVENT_VALUE_LANDSCAPE;
 			case Configuration.ORIENTATION_PORTRAIT:
 				return Constants.EVENT_VALUE_PORTRAIT;
-			case Configuration.ORIENTATION_SQUARE:
-				return Constants.EVENT_VALUE_SQUARE;
 			default:
 				return Constants.EVENT_VALUE_UNDEFINED;
 		}
