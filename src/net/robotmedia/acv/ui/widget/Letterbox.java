@@ -187,6 +187,7 @@ public class Letterbox extends RelativeLayout {
 	 * @param color Color of the letterbox.
 	 * @param duration Duration of the animation in miliseconds.
 	 */
+	@SuppressWarnings("deprecation")
 	public void show(int width, int height, int color, long duration) {
 		final ColorDrawable initialColor = new ColorDrawable(mColor);
 		final ColorDrawable finalColor = new ColorDrawable(color);
