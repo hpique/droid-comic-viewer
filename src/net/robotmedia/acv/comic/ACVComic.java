@@ -49,6 +49,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
+import android.util.SparseArray;
 import android.webkit.WebView;
 import android.webkit.WebView.PictureListener;
 import android.webkit.WebViewClient;
@@ -301,7 +302,7 @@ public class ACVComic extends Comic {
 	private int specificationVersion = 1;
 
 	private int minViewerVersion = NOT_SPECIFIED;
-	private HashMap<Integer, ACVScreen> acvScreens = new HashMap<Integer, ACVScreen>();
+	private SparseArray<ACVScreen> acvScreens = new SparseArray<ACVScreen>();
 	private String bgcolorString;
 	private String scaleMode = Constants.SCALE_MODE_BEST_VALUE;
 	private String defaultTransition = Constants.TRANSITION_MODE_NONE_VALUE;
@@ -492,7 +493,7 @@ public class ACVComic extends Comic {
 
 	public ACVScreen getOrCreateACVScreen(int index) {
 		if (acvScreens == null) {
-			acvScreens = new HashMap<Integer, ACVScreen>();
+			acvScreens = new SparseArray<ACVScreen>();
 		}
 		ACVScreen screen = acvScreens.get(index);
 		if (screen == null) {
