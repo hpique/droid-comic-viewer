@@ -1,3 +1,6 @@
 [submodule "lib/AndroidBillingLibrary"]
 	path = lib/AndroidBillingLibrary
 	url = git@github.com:robotmedia/AndroidBillingLibrary.git
+[submodule "lib/ActionBarSherlock"]
+	path = lib/ActionBarSherlock
+	url = git@github.com:robotmedia/ActionBarSherlock.git

@@ -15,30 +15,30 @@
   limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/net.androidcomics.acv" android:key="root">
+	android:key="root">
 	<net.robotmedia.acv.ui.settings.IconPreferenceScreen
-		android:title="@string/category_visual_title" settings:icon="@android:drawable/ic_menu_gallery">
+		android:title="@string/category_visual_title" android:icon="@android:drawable/ic_menu_gallery">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="net.androidcomics.acv" android:targetClass="net.robotmedia.acv.ui.settings.mobile.VisualSettingsActivity" />
 	</net.robotmedia.acv.ui.settings.IconPreferenceScreen>
 	<net.robotmedia.acv.ui.settings.IconPreferenceScreen
-		android:title="@string/category_controls_title" settings:icon="@drawable/ic_settings_accessibility">
+		android:title="@string/category_controls_title" android:icon="@drawable/ic_settings_accessibility">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="net.androidcomics.acv" android:targetClass="net.robotmedia.acv.ui.settings.mobile.ControlSettingsActivity" />
 	</net.robotmedia.acv.ui.settings.IconPreferenceScreen>
 	<net.robotmedia.acv.ui.settings.IconPreferenceScreen
-		android:title="@string/category_memory_title" settings:icon="@drawable/ic_settings_storage">
+		android:title="@string/category_memory_title" android:icon="@drawable/ic_settings_storage">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="net.androidcomics.acv" android:targetClass="net.robotmedia.acv.ui.settings.mobile.StorageSettingsActivity" />
 	</net.robotmedia.acv.ui.settings.IconPreferenceScreen>
 	<net.robotmedia.acv.ui.settings.IconPreferenceScreen
-		android:title="@string/category_advanced_title" settings:icon="@drawable/ic_settings_privacy">
+		android:title="@string/category_advanced_title" android:icon="@drawable/ic_settings_privacy">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="net.androidcomics.acv" 
 			android:targetClass="net.robotmedia.acv.ui.settings.mobile.AdvancedSettingsActivity" />
 	</net.robotmedia.acv.ui.settings.IconPreferenceScreen>
 	<net.robotmedia.acv.ui.settings.IconPreferenceScreen
-		android:title="@string/category_about_title" settings:icon="@android:drawable/ic_menu_info_details">
+		android:title="@string/category_about_title" android:icon="@android:drawable/ic_menu_info_details">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="net.androidcomics.acv" android:targetClass="net.robotmedia.acv.ui.settings.mobile.AboutSettingsActivity" />
 	</net.robotmedia.acv.ui.settings.IconPreferenceScreen>

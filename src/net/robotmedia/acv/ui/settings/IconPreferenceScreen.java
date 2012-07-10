@@ -53,7 +53,7 @@ public class IconPreferenceScreen extends Preference {
         setLayoutResource(R.layout.preference_icon);
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.IconPreferenceScreen, defStyle, 0);
-        mIcon = a.getDrawable(R.styleable.IconPreferenceScreen_icon);
+        mIcon = a.getDrawable(android.R.attr.icon);
     }
 
     @Override
