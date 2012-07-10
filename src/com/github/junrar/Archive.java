@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import android.annotation.TargetApi;
 import com.github.junrar.exception.RarException;
 import com.github.junrar.exception.RarException.RarExceptionType;
 import com.github.junrar.impl.FileVolumeManager;
@@ -461,6 +462,7 @@ public class Archive implements Closeable {
 	 * @throws IOException
 	 *             if any IO error occur
 	 */
+	@TargetApi(9)
 	public InputStream getInputStream(final FileHeader hd) throws RarException,
 			IOException {
 		final PipedInputStream in = new PipedInputStream(32 * 1024);
