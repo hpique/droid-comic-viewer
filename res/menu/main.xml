@@ -16,7 +16,6 @@
 -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main_menu">
-
     <item
         android:id="@+id/item_navigate"
         android:alphabeticShortcut="@string/item_navigate_shortcut"
@@ -107,7 +106,7 @@
     <item
         android:id="@+id/item_open"
         android:alphabeticShortcut="@string/item_open_shortcut"
-        android:icon="@drawable/ic_menu_archive"
+        android:icon="@drawable/ic_open"
         android:title="@string/item_open_title"/>
     <item
         android:id="@+id/item_settings"

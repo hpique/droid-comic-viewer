@@ -22,7 +22,6 @@ import java.util.*;
 
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.Constants;
-import net.robotmedia.acv.adapter.RecentListBaseAdapter;
 import net.robotmedia.acv.comic.Comic;
 import net.robotmedia.acv.logic.*;
 import net.robotmedia.acv.provider.HistoryManager;
@@ -44,9 +43,7 @@ import android.util.Log;
 import android.view.*;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.*;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class ComicViewerActivity extends ExtendedActivity implements OnGestureListener, GestureDetector.OnDoubleTapListener, ComicViewListener {
 
@@ -77,7 +74,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 				trackOpen();
 				
 				mScreen.setVisibility(View.VISIBLE);
-				hideRecentItems();
 				preferencesController.savePreference(Constants.COMIC_PATH_KEY, comic.getPath());
 
 				mScreen.setComic(comic);
@@ -90,7 +86,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 				
 			} else {
 				mScreen.setVisibility(View.GONE);
-				showRecentItems();
 				showDialog(Constants.DIALOG_LOAD_ERROR);
 			}
 		}
@@ -117,9 +112,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 	protected LoadComicTask loadComicTask = null;
 
 	protected boolean markCleanExitPending = false;
-	protected ViewGroup mRecentItems = null;
-	protected ListView mRecentItemsList = null;
-	protected RecentListBaseAdapter mRecentItemsListAdapter = null;
 	protected View mButtonsContainer;
 	protected View mMain;
 	protected ComicView mScreen;
@@ -195,19 +187,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		setContentView(R.layout.main);
 
 		dialogFactory = new ACVDialogFactory(this);
-		mRecentItems = (ViewGroup) findViewById(R.id.main_recent);
-		mRecentItemsList = (ListView) findViewById(R.id.main_recent_list);
-		mRecentItemsList.setEmptyView(findViewById(R.id.main_recent_list_no_items));
-		mRecentItemsListAdapter = new RecentListBaseAdapter(this, R.layout.list_item_recent);
-		mRecentItemsListAdapter.setMaxNumItems(2);
-		mRecentItemsList.setAdapter(mRecentItemsListAdapter);
-		mRecentItemsList.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				String path = (String) parent.getItemAtPosition(position);
-				loadComic(path);
-			}
-		});
 		
 		mGestureDetector = new GestureDetector(this);
 		preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -256,21 +235,10 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 			if(intent != null) {
 				loaded = attemptToLoadComicFromViewIntent(intent);
 			}
-			if(!loaded) {
-				showRecentItems();
-				showAds();
-			}
 		} else {
 			loadComic(comicPath);
 		}
 		
-	}
-	
-	@Override
-	public void onResume() {
-		mRecentItemsListAdapter.refresh();
-		this.showAds();
-		super.onResume();
 	}
 
 	private void adjustLowMemoryMode() {
@@ -547,7 +515,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 	
 	public void onScreenLoadFailed() {
 		mScreen.setVisibility(View.INVISIBLE);
-		showRecentItems();
 
 		// Remove the comic path in case the comic is defective. 
 		// If the page load failed because of an orientation change, the comic path is saved in the instance state anyway.
@@ -828,9 +795,7 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		if (isComicLoaded()) {
 			removePreviousComic(true);
 			mScreen.setVisibility(View.GONE);
-			showRecentItems();
 			preferencesController.savePreference(Constants.COMIC_PATH_KEY, null);
-			showAds();
 		} else {
 			finish();
 		}
@@ -939,8 +904,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 	private void loadComic(final String comicPath, final int initialIndex) {
 		final File file = new File(comicPath);
 		if (file.exists()) {
-			hideAds();
-
 			mComicPath = comicPath;
 			loadComicTask = new LoadComicTask();
 			loadComicTask.initialIndex = initialIndex;
@@ -1192,21 +1155,6 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		}
 	}
 	
-	private void showAds() {
-		hideAds();
-		View ad = AdsManager.getAd(this);
-		if(ad != null) {
-			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-			lp.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-			mAdsContainer.addView(ad, lp);
-		}
-	}
-	
-	private void hideAds() {
-		AdsManager.destroyAds(this);
-		mAdsContainer.removeAllViews();
-	}
-	
 	@Override
 	protected boolean toggleControls() {
 		boolean shown = super.toggleControls();
@@ -1215,16 +1163,4 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		}
 		return shown;
 	}
-		
-	private void showRecentItems() {
-		mRecentItemsListAdapter.refresh();
-		mRecentItems.setVisibility(View.VISIBLE);
-		mButtonsContainer.setVisibility(View.INVISIBLE);
-	}
-	
-	private void hideRecentItems() {
-		mRecentItems.setVisibility(View.GONE);
-		mButtonsContainer.setVisibility(View.VISIBLE);
-	}
-	
 }

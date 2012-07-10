@@ -14,9 +14,4 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources>
-    <string name="accesibility_background">Background</string>
-	<string name="accesibility_corner">Corner</string>
-    <string name="accesibility_icon">Icon</string>
-	<string name="accesibility_logo">Logo</string>
-</resources>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/bg_dots" android:fromDegrees="180" android:toDegrees="180" />

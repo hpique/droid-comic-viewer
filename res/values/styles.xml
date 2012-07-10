@@ -14,9 +14,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources>
+<resources>  
     <!-- Base application theme is the default theme. -->
     <style name="Theme" parent="android:Theme.Holo">
+        <item name="windowActionBarOverlay">true</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:actionBarStyle">@style/Theme.ActionBarStyle</item>
     </style>
@@ -41,7 +42,7 @@
 	</style>
 
 	<style name="Theme.ActionBarStyle" parent="android:style/Widget.Holo.ActionBar">
-		<item name="android:background">#a6000000</item>
+		<item name="android:background">#00000000</item>
 	</style>
 
 	<!-- List -->
