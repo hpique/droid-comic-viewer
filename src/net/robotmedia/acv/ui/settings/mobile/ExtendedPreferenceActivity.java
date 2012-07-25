@@ -118,7 +118,7 @@ public abstract class ExtendedPreferenceActivity extends PreferenceActivity impl
 	
 	@Override
 	protected void onDestroy() {	
-		AdsManager.destroyAds(this);
+		AdsManager.destroyAd(this);
 		super.onDestroy();
 	}
 }

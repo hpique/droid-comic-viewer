@@ -73,16 +73,13 @@ public class AdsManager {
 		return getAd(activity, adaptedSize);
 	}
 	
-	public static void destroyAds(Activity activity) {
-		if (!usesAds) return;
-
+	public static void destroyAd(Activity activity) {
 		AdView adView = (AdView) activity.findViewById(R.id.ad);
 		if (adView != null) {
 			adView.destroy();
 		}
 	}
 	
-
 	protected static void init(Context context) {
 		if (!usesAds) return;
 		
