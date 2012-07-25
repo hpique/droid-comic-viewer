@@ -14,15 +14,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources>  
-    <!-- Base application theme is the default theme. -->
-    <style name="Theme" parent="android:Theme.Holo">
-        <item name="windowActionBarOverlay">true</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:actionBarStyle">@style/Theme.ActionBarStyle</item>
-    </style>
-
-	<style name="Theme.text2b">
+<resources>
+    <style name="Theme.text2b">
 		<item name="android:textSize">14sp</item>
 		<item name="android:textColor">#FFF</item>
 	</style>
@@ -48,7 +41,7 @@
 	<!-- List -->
 	<style name="Theme.ListHeader">
 	    <item name="android:textStyle">bold</item>
-	    <item name="android:textColor">@color/kiwi_green</item>
+	    <item name="android:textColor">?attr/acv__primary_color</item>
 	    <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
         <item name="android:background">@drawable/bg_header</item>

@@ -14,7 +14,10 @@
   limitations under the License.
 -->
 <resources>
-	<!-- Default ScrollView style. -->
+	<attr name="acv__primary_color" format="reference"/>
+	<attr name="acv__secondary_color" format="reference"/>
+    
+    <!-- Default ScrollView style. -->
 	<attr name="scrollViewStyle" format="reference"/>
 	<declare-styleable name="ScrollView">
 		<!--

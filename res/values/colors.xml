@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="kiwi_green">#ff99cc00</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    
+    <color name="acv__blue">#33b5e5</color>
+    <color name="acv__dark_blue">#0099cc</color>
+    <color name="acv__green">#99cc00</color>
+    <color name="acv__dark_green">#669900</color>
+    <color name="acv__orange">#ffbb33</color>
+    <color name="acv__dark_orange">#ff8800</color>
+    <color name="acv__purple">#aa66cc</color>
+    <color name="acv__dark_purple">#9933cc</color>
+    <color name="acv__red">#ff4444</color>
+    <color name="acv__dark_red">#cc0000</color>
 </resources>

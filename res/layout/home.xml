@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:src="@drawable/bg_dots"
-            android:tint="@color/kiwi_green"
+            android:tint="?attr/acv__primary_color"
             android:alpha="0.3" 
             android:contentDescription="@string/accesibility_background"
             />
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:src="@drawable/bg_dots_flip_vertical"
-            android:tint="@color/kiwi_green"
+            android:tint="?attr/acv__primary_color"
             android:alpha="0.3" 
             android:contentDescription="@string/accesibility_background" />
         <RelativeLayout
@@ -46,12 +46,13 @@
             android:layout_above="@+id/mainRecentTable">
 
             <ImageView
-                android:id="@+id/main_logo"
+                android:id="@+id/home_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/logo"
-                android:contentDescription="@string/accesibility_logo" />
+                android:contentDescription="@string/accesibility_logo"
+                android:onClick="setRandomTheme" />
 
         </RelativeLayout>
 
@@ -68,6 +69,7 @@
              >
 
              <TextView
+                 android:id="@+id/home_recent_header"
                  style="@style/Theme.ListHeader"
                  android:layout_width="fill_parent"
                  android:layout_height="wrap_content"

@@ -160,6 +160,13 @@
 	<string name="dialog_email_error_title">Invalid email</string>
     <string name="dialog_email_error_text">Please enter a valid email address.</string>
 
+    <!-- Themes -->
+    <string name="theme_orange">Garfield Orange</string>
+    <string name="theme_blue">Bettle Blue</string>
+    <string name="theme_green">Hulk Green</string>
+    <string name="theme_red">Hellboy Red</string>
+    <string name="theme_purple">Phantom Purple</string>	
+    
 	<!-- Share -->
     <string name="share_app_title">Read comics in your Android!</string>
     <string name="share_app_message">Check out ACV, the #1 comics and manga reader for Android http://goo.gl/FfAWL</string>
