@@ -15,16 +15,13 @@
  ******************************************************************************/
 package net.robotmedia.acv.logic;
 
-import java.io.File;
-
+import net.androidcomics.acv.R;
 import net.robotmedia.acv.Constants;
 import net.robotmedia.acv.comic.Comic;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.res.Configuration;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -33,44 +30,16 @@ public class PreferencesController {
 	public static final String PREFERENCE_LOW_MEMORY = "low_memory";
 	public static final String PREFERENCE_MAX_IMAGE_WIDTH = "max_image_width";
 	public static final String PREFERENCE_MAX_IMAGE_HEIGHT = "max_image_height";
+	public static final String PREFERENCE_THEME = "theme";
+	public static final int[] THEMES = {R.style.Theme_Blue, R.style.Theme_Green, R.style.Theme_Orange, R.style.Theme_Purple, R.style.Theme_Red};
+	private static final int DEFAULT_THEME = R.style.Theme_Green;
 	
 	private SharedPreferences preferences;
+	private Context context;
 
 	public PreferencesController(Context context) {
+		this.context = context;
 		this.preferences = PreferenceManager.getDefaultSharedPreferences(context);		
-	}
-	
-	@SuppressWarnings("deprecation")
-	public void legacy() {
-		File legacyTempPath = new File(Environment.getExternalStorageDirectory(), Constants.LEGACY_TEMP_PATH);
-		if(legacyTempPath.exists()) {
-			String[] files = legacyTempPath.list();
-			if (files != null) {
-				for (int i = 0; i < files.length; i++) {
-					File file = new File(legacyTempPath, files[i]);
-					file.delete();
-				}
-			}
-			legacyTempPath.delete();
-		}
-		
-		Editor editor = preferences.edit();
-		if (preferences.contains(Constants.LEGACY_FLING_ENABLED_KEY)) {
-			if (!preferences.getBoolean(Constants.LEGACY_FLING_ENABLED_KEY, true)) {
-				editor.putString(Constants.INPUT_FLING_LEFT, Constants.ACTION_VALUE_NONE);
-				editor.putString(Constants.INPUT_FLING_RIGHT, Constants.ACTION_VALUE_NONE);
-			}
-			editor.remove(Constants.LEGACY_FLING_ENABLED_KEY);
-		}
-		editor.remove(Constants.LEGACY_STARTUP_UPDATE_CHECK_KEY);
-		
-		// Bug fix
-		int orientation = preferences.getInt(Constants.ORIENTATION_KEY, Configuration.ORIENTATION_LANDSCAPE);
-		if (orientation == 0) {
-			editor.putInt(Constants.ORIENTATION_KEY, Configuration.ORIENTATION_LANDSCAPE);
-		}
-
-		editor.commit();
 	}
 	
 	public boolean isLeftToRight() {
@@ -84,7 +53,31 @@ public class PreferencesController {
 		return Constants.ACTION_VALUE_PREVIOUS.equals(previousInputAction) && Constants.ACTION_VALUE_NEXT.equals(nextInputAction);
 	}
 	
-	public void savePreference(String key, String value) {
+	private String getThemeName(int resId) {
+		return context.getResources().getResourceEntryName(resId);
+	}
+	
+	public int getTheme() {
+		final String themeName = preferences.getString(PREFERENCE_THEME, getThemeName(DEFAULT_THEME));
+		for (int i = 0; i < THEMES.length; i++) {
+			int resId = THEMES[i];
+			String candidateThemeName = this.getThemeName(resId);
+			if (themeName.equals(candidateThemeName)) {
+				return resId;
+			}
+		}
+		// The theme in preferences doesn't exist anymore
+		this.setTheme(DEFAULT_THEME);
+		return DEFAULT_THEME;
+	}
+	
+	public void setTheme(int resId) {
+		final String themeName = getThemeName(resId);
+		this.setPreference(PREFERENCE_THEME, themeName);
+	}
+	
+	
+	public void setPreference(String key, String value) {
 		Editor editor = preferences.edit();
 		editor.putString(key, value);
 		editor.commit();
