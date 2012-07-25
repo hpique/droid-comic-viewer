@@ -3,23 +3,17 @@ package net.robotmedia.acv.ui;
 import java.util.Random;
 
 import net.androidcomics.acv.R;
-import net.robotmedia.acv.adapter.RecentListBaseAdapter;
 import net.robotmedia.acv.logic.AdsManager;
 import net.robotmedia.acv.logic.PreferencesController;
-import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import com.actionbarsherlock.view.Menu;
 
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -28,11 +22,7 @@ import com.google.ads.AdView;
 
 public class HomeActivity extends ACVActivity {
 
-	protected ViewGroup mRecentItems = null;
-	protected ListView mRecentItemsList = null;
-	protected RecentListBaseAdapter mRecentItemsListAdapter = null;
 	private RelativeLayout mAdsContainer;
-	private RelativeLayout mLogoContainer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,23 +31,8 @@ public class HomeActivity extends ACVActivity {
 
 		ActionBar actionBar = this.getSupportActionBar();
 
-		mLogoContainer = (RelativeLayout) findViewById(R.id.home_logo_container);
-		
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowTitleEnabled(false);
-
-		mRecentItems = (ViewGroup) findViewById(R.id.main_recent);
-		mRecentItemsList = (ListView) findViewById(R.id.main_recent_list);
-		mRecentItemsList.setEmptyView(findViewById(R.id.main_recent_list_no_items));
-		mRecentItemsListAdapter = new RecentListBaseAdapter(this, R.layout.list_item_recent);
-		mRecentItemsListAdapter.setMaxNumItems(2);
-		mRecentItemsList.setAdapter(mRecentItemsListAdapter);
-		mRecentItemsList.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				// String path = (String) parent.getItemAtPosition(position);
-			}
-		});
 
 		mAdsContainer = (RelativeLayout) findViewById(R.id.mainAdsContainer);
 		showAds();
@@ -77,12 +52,6 @@ public class HomeActivity extends ACVActivity {
 			mAdsContainer.addView(ad, lp);
 		}
 	}
-		
-	@Override
-	public void onResume() {
-		mRecentItemsListAdapter.refresh();
-		super.onResume();
-	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -91,25 +60,6 @@ public class HomeActivity extends ACVActivity {
 	    inflater.inflate(R.menu.home, menu);
 	    return true;
 	}
-	
-	public void onWindowFocusChanged(boolean hasFocus) {
-		super.onWindowFocusChanged(hasFocus);
-		layoutLogoContainerBelowActionBar();
-	}
-	
-	private void layoutLogoContainerBelowActionBar() {
-		ActionBar actionBar = this.getSupportActionBar();
-		ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) mLogoContainer.getLayoutParams();
-		params.setMargins(0, actionBar.getHeight(), 0, 0);
-		mLogoContainer.setLayoutParams(params);
-		mLogoContainer.requestLayout();
-	}
-	
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-    	super.onConfigurationChanged(newConfig);
-    	layoutLogoContainerBelowActionBar();
-    }
     
     public void setRandomTheme(View v) {
     	final int currentThemeId = this.getPreferences().getTheme();

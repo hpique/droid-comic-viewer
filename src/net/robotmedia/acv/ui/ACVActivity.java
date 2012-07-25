@@ -3,9 +3,9 @@ package net.robotmedia.acv.ui;
 import net.robotmedia.acv.logic.PreferencesController;
 import android.os.Bundle;
 
-import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-public class ACVActivity extends SherlockActivity {
+public class ACVActivity extends SherlockFragmentActivity {
 
 	private PreferencesController preferences;
 	
