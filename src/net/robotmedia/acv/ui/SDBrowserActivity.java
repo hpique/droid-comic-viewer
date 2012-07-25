@@ -162,7 +162,7 @@ public class SDBrowserActivity extends TabActivity {
 	private void changeDirectory(File directory) {
 		currentDirectory = directory;
 		this.setTitle(directory.getName());
-		preferencesController.savePreference(Constants.COMICS_PATH_KEY, directory.getAbsolutePath());
+		preferencesController.setPreference(Constants.COMICS_PATH_KEY, directory.getAbsolutePath());
 		browserListView.setAdapter(new ListAdapter(SDBrowserActivity.this, directory, R.layout.sd_item_empty));
 	}
 
