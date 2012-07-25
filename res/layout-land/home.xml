@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
-        android:layout_above="@+id/mainAdsContainer"
+        android:layout_above="@+id/ad_container"
         android:orientation="horizontal"
         android:baselineAligned="false">
 
@@ -76,7 +76,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@id/mainAdsContainer"
+        android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />

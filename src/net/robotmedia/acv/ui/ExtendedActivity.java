@@ -66,7 +66,7 @@ public abstract class ExtendedActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 
-		AdsManager.destroyAds(this);
+		AdsManager.destroyAd(this);
 
 		super.onDestroy();
 

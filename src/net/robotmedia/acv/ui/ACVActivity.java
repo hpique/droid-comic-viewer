@@ -15,10 +15,16 @@
  ******************************************************************************/
 package net.robotmedia.acv.ui;
 
+import net.androidcomics.acv.R;
+import net.robotmedia.acv.logic.AdsManager;
 import net.robotmedia.acv.logic.PreferencesController;
 import android.os.Bundle;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.RelativeLayout;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.google.ads.AdView;
+import com.google.analytics.tracking.android.EasyTracker;
 
 public class ACVActivity extends SherlockFragmentActivity {
 
@@ -28,12 +34,40 @@ public class ACVActivity extends SherlockFragmentActivity {
 		return preferences;
 	}
 
+	private RelativeLayout mAdContainer;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		preferences = new PreferencesController(this);
 		final int themeId = this.preferences.getTheme();
 		this.setTheme(themeId);
+		
+		EasyTracker.getInstance().activityStart(this);
+		
+		mAdContainer = (RelativeLayout) findViewById(R.id.ad_container);
+		showAd();
+	}
+	
+	@Override
+	protected void onStop() {
+		EasyTracker.getInstance().activityStop(this);
+		super.onStop();
+	}
+	
+	private void hideAds() {
+		AdsManager.destroyAd(this);
+		mAdContainer.removeAllViews();
+	}
+	
+	protected void showAd() {
+		hideAds();
+		final AdView ad = AdsManager.getAd(this);
+		if (ad == null) return;
+		
+		RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+		lp.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+		mAdContainer.addView(ad, lp);
 	}
 	
 }

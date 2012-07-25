@@ -62,10 +62,10 @@
         android:name="net.robotmedia.acv.ui.RecentSummaryFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mainAdsContainer" />
+        android:layout_above="@+id/ad_container" />
 
     <RelativeLayout
-        android:id="@id/mainAdsContainer"
+        android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />

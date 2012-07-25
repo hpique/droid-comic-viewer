@@ -18,7 +18,6 @@ package net.robotmedia.acv.ui;
 import java.util.Random;
 
 import net.androidcomics.acv.R;
-import net.robotmedia.acv.logic.AdsManager;
 import net.robotmedia.acv.logic.PreferencesController;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
@@ -26,18 +25,13 @@ import android.os.Bundle;
 import com.actionbarsherlock.view.Menu;
 
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuInflater;
-import com.google.ads.AdView;
 
 public class HomeActivity extends ACVActivity {
-
-	private RelativeLayout mAdsContainer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,24 +42,6 @@ public class HomeActivity extends ACVActivity {
 
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowTitleEnabled(false);
-
-		mAdsContainer = (RelativeLayout) findViewById(R.id.mainAdsContainer);
-		showAds();
-	}
-	
-	private void hideAds() {
-		AdsManager.destroyAds(this);
-		mAdsContainer.removeAllViews();
-	}
-	
-	private void showAds() {
-		hideAds();
-		AdView ad = AdsManager.getAd(this);
-		if(ad != null) {
-			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-			lp.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-			mAdsContainer.addView(ad, lp);
-		}
 	}
 	
 	@Override
