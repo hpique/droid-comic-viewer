@@ -16,12 +16,12 @@
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <ImageView
         android:id="@+id/bg_dots_top"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:alpha="0.3"
@@ -31,7 +31,7 @@
 
     <ImageView
         android:id="@+id/bg_dots_bottom"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:alpha="0.3"
@@ -41,8 +41,8 @@
 
     <RelativeLayout
         android:id="@+id/home_logo_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/home_recent_summary"
         android:layout_alignParentTop="true"
         android:layout_marginTop="?attr/actionBarSize" >
@@ -66,7 +66,7 @@
 
     <RelativeLayout
         android:id="@id/mainAdsContainer"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
