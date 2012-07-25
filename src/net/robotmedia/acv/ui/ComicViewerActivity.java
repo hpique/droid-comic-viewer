@@ -74,7 +74,7 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 				trackOpen();
 				
 				mScreen.setVisibility(View.VISIBLE);
-				preferencesController.savePreference(Constants.COMIC_PATH_KEY, comic.getPath());
+				preferencesController.setPreference(Constants.COMIC_PATH_KEY, comic.getPath());
 
 				mScreen.setComic(comic);
 				mScreen.goToScreen(initialIndex);
@@ -518,7 +518,7 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 
 		// Remove the comic path in case the comic is defective. 
 		// If the page load failed because of an orientation change, the comic path is saved in the instance state anyway.
-		preferencesController.savePreference(Constants.COMIC_PATH_KEY, null);
+		preferencesController.setPreference(Constants.COMIC_PATH_KEY, null);
 		
 		removePreviousComic(true);
 		
@@ -795,7 +795,7 @@ public class ComicViewerActivity extends ExtendedActivity implements OnGestureLi
 		if (isComicLoaded()) {
 			removePreviousComic(true);
 			mScreen.setVisibility(View.GONE);
-			preferencesController.savePreference(Constants.COMIC_PATH_KEY, null);
+			preferencesController.setPreference(Constants.COMIC_PATH_KEY, null);
 		} else {
 			finish();
 		}
