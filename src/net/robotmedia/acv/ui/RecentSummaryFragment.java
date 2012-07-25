@@ -34,7 +34,7 @@ public class RecentSummaryFragment extends SherlockFragment {
 		mRecentItems = (ViewGroup) getActivity().findViewById(R.id.main_recent);
 		mRecentItemsList = (ListView) getActivity().findViewById(R.id.main_recent_list);
 		mRecentItemsList.setEmptyView(getActivity().findViewById(R.id.main_recent_list_no_items));
-		mRecentItemsListAdapter = new RecentListBaseAdapter(getActivity(), R.layout.list_item_recent);
+		mRecentItemsListAdapter = new RecentListBaseAdapter(getActivity(), R.layout.recent_summary_item);
 		mRecentItemsListAdapter.setMaxNumItems(2);
 		mRecentItemsList.setAdapter(mRecentItemsListAdapter);
 		mRecentItemsList.setOnItemClickListener(new OnItemClickListener() {
