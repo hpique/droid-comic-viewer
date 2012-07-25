@@ -19,25 +19,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/bg_dots_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:alpha="0.3"
-        android:contentDescription="@string/accesibility_background"
-        android:src="@drawable/bg_dots"
-        android:tint="?attr/acv__primary_color" />
-
-    <ImageView
-        android:id="@+id/bg_dots_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:alpha="0.3"
-        android:contentDescription="@string/accesibility_background"
-        android:src="@drawable/bg_dots_flip_vertical"
-        android:tint="?attr/acv__primary_color" />
+    <include layout="@layout/activity_background" />
 
     <RelativeLayout
         android:id="@+id/home_logo_container"
