@@ -19,23 +19,23 @@ import java.util.Random;
 
 import net.androidcomics.acv.R;
 import net.robotmedia.acv.logic.PreferencesController;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import com.actionbarsherlock.view.Menu;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 public class HomeActivity extends ACVActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);		
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home);
 
 		ActionBar actionBar = this.getSupportActionBar();
@@ -43,38 +43,53 @@ public class HomeActivity extends ACVActivity {
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowTitleEnabled(false);
 	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-	    MenuInflater inflater = getSupportMenuInflater();
-	    inflater.inflate(R.menu.home, menu);
-	    return true;
+
+	public void setRandomTheme(View v) {
+		final int currentThemeId = this.getPreferences().getTheme();
+		int newThemeId;
+		do {
+			final int i = new Random().nextInt(PreferencesController.THEMES.length);
+			newThemeId = PreferencesController.THEMES[i];
+		} while (currentThemeId == newThemeId);
+
+		this.getPreferences().setTheme(newThemeId);
+		this.updateTheme(newThemeId);
 	}
-    
-    public void setRandomTheme(View v) {
-    	final int currentThemeId = this.getPreferences().getTheme();
-    	int newThemeId;
-    	do {
-    		final int i = new Random().nextInt(PreferencesController.THEMES.length);
-    		newThemeId = PreferencesController.THEMES[i];
-    	} while (currentThemeId == newThemeId); 
-    	
-    	this.getPreferences().setTheme(newThemeId);
-    	this.updateTheme(newThemeId);
-    }
-    
-    private void updateTheme(int resId) {
-    	final int[] attrs = new int[] { R.attr.acv__primary_color};
-    	TypedArray values = this.getTheme().obtainStyledAttributes(resId, attrs);
-    	final int primaryColor = values.getColor(0, getResources().getColor(R.color.acv__green));
-    	values.recycle();
-    	
+
+	private void updateTheme(int resId) {
+		final int[] attrs = new int[] { R.attr.acv__primary_color };
+		TypedArray values = this.getTheme().obtainStyledAttributes(resId, attrs);
+		final int primaryColor = values.getColor(0, getResources().getColor(R.color.acv__green));
+		values.recycle();
+
 		final ImageView dotsTop = (ImageView) findViewById(R.id.bg_dots_top);
 		dotsTop.setColorFilter(primaryColor, PorterDuff.Mode.SRC_ATOP);
 		final ImageView dotsBottom = (ImageView) findViewById(R.id.bg_dots_bottom);
 		dotsBottom.setColorFilter(primaryColor, PorterDuff.Mode.SRC_ATOP);
 		final TextView recentHeader = (TextView) findViewById(R.id.home_recent_header);
 		recentHeader.setTextColor(primaryColor);
-    }
+	}
+
+	@Override
+	protected int getMenuId() {
+		return R.menu.home;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		final int id = item.getItemId();
+		switch (id) {
+		case R.id.menu_open:
+			startOpen();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	private void startOpen() {
+		final Intent intent = new Intent(this, OpenActivity.class);
+		startActivity(intent);
+	}
+
 }

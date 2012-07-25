@@ -23,10 +23,12 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 import com.google.ads.AdView;
 import com.google.analytics.tracking.android.EasyTracker;
 
-public class ACVActivity extends SherlockFragmentActivity {
+public abstract class ACVActivity extends SherlockFragmentActivity {
 
 	private PreferencesController preferences;
 	
@@ -50,18 +52,32 @@ public class ACVActivity extends SherlockFragmentActivity {
 	}
 	
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+	    MenuInflater inflater = getSupportMenuInflater();
+	    inflater.inflate(getMenuId(), menu);
+	    return true;
+	}
+	
+	protected abstract int getMenuId();
+	
+	@Override
 	protected void onStop() {
 		EasyTracker.getInstance().activityStop(this);
 		super.onStop();
 	}
 	
-	private void hideAds() {
+	private void hideAd() {
+		if (mAdContainer == null) return;
+
 		AdsManager.destroyAd(this);
 		mAdContainer.removeAllViews();
 	}
 	
 	protected void showAd() {
-		hideAds();
+		if (mAdContainer == null) return;
+
+		hideAd();
 		final AdView ad = AdsManager.getAd(this);
 		if (ad == null) return;
 		
