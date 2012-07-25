@@ -3,10 +3,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry exported="true" kind="lib" path="lib/FlurryAgent.jar"/>
-	<classpathentry kind="lib" path="lib/android-support-v4.jar"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="lib/GoogleAdMobAdsSdk-6.0.1.jar"/>
-	<classpathentry kind="lib" path="lib/libGoogleAnalyticsV2.jar"/>
+	<classpathentry kind="lib" path="libs/GoogleAdMobAdsSdk-6.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/libGoogleAnalyticsV2.jar"/>
+	<classpathentry kind="lib" path="/ActionBarSherlock/libs/android-support-v4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
