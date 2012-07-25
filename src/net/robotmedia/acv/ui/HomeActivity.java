@@ -36,7 +36,6 @@ public class HomeActivity extends ACVActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.home);
 
 		ActionBar actionBar = this.getSupportActionBar();
 
@@ -71,10 +70,15 @@ public class HomeActivity extends ACVActivity {
 	}
 
 	@Override
+	protected int getContentViewId() {
+		return R.layout.home;
+	}
+	
+	@Override
 	protected int getMenuId() {
 		return R.menu.home;
 	}
-
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		final int id = item.getItemId();
@@ -91,5 +95,6 @@ public class HomeActivity extends ACVActivity {
 		final Intent intent = new Intent(this, OpenActivity.class);
 		startActivity(intent);
 	}
+
 
 }

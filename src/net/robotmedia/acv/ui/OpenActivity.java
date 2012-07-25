@@ -18,6 +18,11 @@ public class OpenActivity extends ACVActivity {
 	}
 	
 	@Override
+	protected int getContentViewId() {
+		return R.layout.open;
+	}
+	
+	@Override
 	protected int getMenuId() {
 		return R.menu.open;
 	}

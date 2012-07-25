@@ -41,6 +41,7 @@ public abstract class ACVActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(getContentViewId());
 		preferences = new PreferencesController(this);
 		final int themeId = this.preferences.getTheme();
 		this.setTheme(themeId);
@@ -60,6 +61,7 @@ public abstract class ACVActivity extends SherlockFragmentActivity {
 	}
 	
 	protected abstract int getMenuId();
+	protected abstract int getContentViewId();
 	
 	@Override
 	protected void onStop() {
