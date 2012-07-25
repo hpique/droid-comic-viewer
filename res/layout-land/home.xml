@@ -16,12 +16,12 @@
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <ImageView
         android:id="@+id/bg_dots_top"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:alpha="0.3"
@@ -31,7 +31,7 @@
 
     <ImageView
         android:id="@+id/bg_dots_bottom"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:alpha="0.3"
@@ -39,30 +39,41 @@
         android:src="@drawable/bg_dots_flip_vertical"
         android:tint="?attr/acv__primary_color" />
 
-    <RelativeLayout
-        android:id="@+id/home_logo_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/home_recent_summary"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="?attr/actionBarSize" >
-
-        <ImageView
-            android:id="@+id/home_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:contentDescription="@string/accesibility_logo"
-            android:onClick="setRandomTheme"
-            android:src="@drawable/logo" />
-    </RelativeLayout>
-
-    <fragment
-        android:id="@+id/home_recent_summary"
-        android:name="net.robotmedia.acv.ui.RecentSummaryFragment"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mainAdsContainer" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_above="@+id/mainAdsContainer"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/home_logo_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/home_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/accesibility_logo"
+                android:onClick="setRandomTheme"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+            <fragment
+                android:id="@+id/home_recent_summary"
+                android:name="net.robotmedia.acv.ui.RecentSummaryFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@id/mainAdsContainer"
